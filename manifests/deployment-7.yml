@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "dimamkluster-612d"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "dimamkluster-612d"
+  template:
+    metadata:
+      labels:
+        app: "dimamkluster-612d"
+    spec:
+      containers:
+        - name: "dimamkluster-612d"
+          image: "acrdemoeitan1111.azurecr.io/dimamkluster"
+          ports:
+          - containerPort: 80
